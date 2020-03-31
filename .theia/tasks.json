@@ -1,0 +1,10 @@
+{
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "ng",
+            "path": "meutesteangular/",
+            "problemMatcher": []
+        }
+    ]
+}
