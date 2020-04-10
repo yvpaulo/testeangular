@@ -1,4 +1,10 @@
 tasks:
-  - init: echo "Replace me with a build script for the project."
-    command: echo "Replace me with something that should run on every start, or just
-      remove me entirely."
+  - init: |
+      touch /tmp/.npm-lock
+      npm install -g @angular/cli
+      rm /tmp/.npm-lock
+    command: ''
+  - init: sleep 5 && while [ -f /tmp/.npm-lock ]; do sleep 5; done
+    command:  ng serve --open
+image:
+  file: .gitpod.Dockerfile
